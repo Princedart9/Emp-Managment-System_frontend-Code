@@ -1,0 +1,28 @@
+<h2 style="font-family: 'Times New Roman', Times, serif;">Employee list</h2>
+<table class="table table-striped ta">
+  <thead>
+    <!--it is use for the Table header-->
+    <tr>
+      <th class="fw-bold text-primary">ID</th> <!--it is use for the cell header!!-->
+      <th class="fw-bold text-primary">firstName</th>
+      <th class="fw-bold text-primary">lastName</th>
+      <th class="fw-bold text-primary">Email Address</th>
+      <th class="fw-bold text-primary">Action</th>
+    </tr>    
+  </thead>
+
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{employee.id}}</td> 
+        <td>{{employee.firstName}}</td> 
+        <td>{{employee.lastName}}</td> 
+        <td>{{employee.emailID}}</td> 
+        <td>
+          <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+          <button (click)="viewEmployeeDetails(employee.id)" class="btn btn-success" style="margin-left: 10px;">View</button>
+          <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+        </td>
+      </tr>
+    </tbody>  
+  
+</table>

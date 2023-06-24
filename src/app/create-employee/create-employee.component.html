@@ -1,0 +1,24 @@
+<div class="col-md-5 offset-3">
+    <h3 style="font-family: 'Times New Roman', Times, serif;">Create Employee</h3>
+    <form (ngSubmit)="onSubmit()">
+        <!--We already created an Object of Model class[Employee] to use the Class variable!!-->
+        <div class="form-control">
+            <label class="fw-bold text-primary">First Name: </label>
+            <input type="text" class="form-control" id="firstName"
+                [(ngModel)]="employee.firstName" name="firstName">
+        </div>
+        <div class="form-control">
+            <label class="fw-bold text-primary">Last Name: </label>
+            <input type="text" class="form-control" id="lastName"
+                [(ngModel)]="employee.lastName" name="lastName">
+        </div>
+        <div class="form-control">
+            <label class="fw-bold text-primary">emailID: </label>
+            <input type="email" class="form-control" id="emailID"
+                [(ngModel)]="employee.emailID" name="emailID">
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+        
+    </form>
+</div>
